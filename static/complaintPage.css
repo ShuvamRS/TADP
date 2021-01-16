@@ -1,0 +1,19 @@
+header, main, html, .main_table_tr{
+	background-color: #EEE2DC;
+}
+
+h1, h2, h4, h5, h6, #complaint_tags{
+	text-align: center;
+}
+
+.input-group, mb-3{
+	width:30%;
+}
+header{
+	font-family: "Merienda", sans-serif;
+}
+
+#debug{
+	font-family: sans-serif;
+	color: red;
+}

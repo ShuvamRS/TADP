@@ -1,0 +1,20 @@
+header, main, html, .main_table_tr{
+	background-color: #EEE2DC;
+}
+
+h1, h6, #search, #vis{
+	text-align: center;
+}
+
+.input-group, mb-3{
+	width:40%;
+}
+
+header{
+	font-family: "Merienda", sans-serif;
+}
+
+#debug{
+	font-family: sans-serif;
+	color: red;
+}

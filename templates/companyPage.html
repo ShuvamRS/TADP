@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Shuvam Raj Satyal">
+	<meta name="description" content="The Anti-Discrimination Project - {{companyName}}">
+	
+	<!--Load JQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Load Vega-lite-->
+	<script src="https://cdn.jsdelivr.net/npm/vega@5.6.0"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.8"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vega-embed@5.1.3"></script>
+	<!--Load bootstrap stylesheet-->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<!-- Import Fetch using CDN -->
+  	<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
+
+  	<!-- Link css file -->
+  	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='companyPage.css') }}">
+  	<!-- Link javascript file -->
+  	<script src="{{url_for('static', filename='companyPage.js')}}"></script>
+  	
+  	<script type="text/javascript">var COMPANY_NAME = {{companyName|tojson}} </script>
+  	<script type="text/javascript">var COMPANY_ADDRESS = {{companyAddress|tojson}} </script>
+  	<script type="text/javascript">var DEPARTMENT_INFO = {{departmentInfo|tojson}} </script>
+  	<script type="text/javascript">var DEBUG = {{DEBUG|tojson}} </script>
+  	<script type="text/javascript">var MAX_VIS = {{MAX_VIS|tojson}} </script>
+  	<!-- Google Fonts API -->
+  	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
+  
+    <meta name="viewport" content="width=device-width">
+    <title>The Anti-Discrimination Project</title>
+</head>
+
+<body>
+	<header>
+		<h1>The Anti-Discrimination Project</h1>
+		<br>
+	</header>
+	<main>
+		<br>
+		<div id="vis">
+			<div id="complaint_vis"></div>
+		</div>
+		<br><br><br>
+		<div id="main_table"></div>
+		<div id="add_dept"></div>
+	</main>
+</body>
+
+</html>

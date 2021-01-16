@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Shuvam Raj Satyal">
+	<meta name="description" content="The Anti-Discrimination Project - Complaint Page">
+	
+	<!--Load JQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--Load bootstrap stylesheet-->
+  	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  	<!-- Import Fetch using CDN -->
+  	<script type="module" src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>
+
+  	<!-- Link css file -->
+  	<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='complaintPage.css') }}">
+  	<!-- Link javascript file -->
+  	<script src="{{url_for('static', filename='complaintPage.js')}}"></script>
+    <!-- Google Fonts API -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
+  	
+  	<script type="text/javascript">var COMPANY_NAME = {{companyName|tojson}} </script>
+  	<script type="text/javascript">var COMPANY_ADDRESS = {{companyAddress|tojson}} </script>
+  	<script type="text/javascript">var DEPARTMENT_NAME = {{departmentName|tojson}} </script>
+  	<script type="text/javascript">var COMPLAINT_INFO = {{complaintInfo|tojson}} </script>
+  	<script type="text/javascript">var COMPLAINT_TAGS = {{complaintTags|tojson}} </script>
+  	<script type="text/javascript">var DEBUG = {{DEBUG|tojson}} </script>
+  	<script type="text/javascript">var MAX_COMPLAINT_TAGS = {{MAX_COMPLAINT_TAGS|tojson}} </script>
+
+  
+
+    <meta name="viewport" content="width=device-width">
+    <title>The Anti-Discrimination Project</title>
+</head>
+
+<body>
+	<header>
+		<h1>The Anti-Discrimination Project</h1>
+		<br>
+	</header>
+	<main>
+		<div id="complaint_tags"></div>
+		<br><br><br>
+		<div id="add_complaint_tags"></div>
+	</main>
+</body>
+
+</html>
